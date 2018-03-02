@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Exponents Quiz</title>
+    <meta name="description" content="A quiz on the properties of exponents">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header class="mainTitle" role="banner"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Sierpinski8.svg" class="Sierpinski" alt="Sierpinski's Triangle">
+    <h1>Exponents Quiz</h1>
+    </header>
+    <main role="main">
+    
+    <div class="startPage">
+      <p>Test your understanding of exponents</p>
+      <button type="button" class="startQuiz">Get Started!</button>
+    </div>
+    
+    <form class="question" action="javascript:void(0);" method="post">
+      <h2>Question number <span class="questionNumber">1</span> of 10</h2>
+      <fieldset>
+      <legend><p>Simplify the expression</p>
+      <p class="expression">$$(b^8)(b^4)$$</p></legend>
+      <input type="radio" name="answerChoice" id="answer1" value="1"><label for="answer1">\(b^2\)</label>
+      <input type="radio" name="answerChoice" id="answer2" value="2"><label for="answer2">\(b^{12}\)</label>
+      <input type="radio" name="answerChoice" id="answer3" value="3"><label for="answer3">\(b^4\)</label> 
+      <input type="radio" name="answerChoice" id="answer4" value="4"><label for="answer4">\(b^{32}\)</label>
+      <button type="submit" class="submitAnswer">Submit</button>
+      <button type="button" class="startOver">Start Over</button>
+      
+      </fieldset>
+    </form>
+    
+    <div class="status">
+      <div class="feedbackContainer"><p class="feedback"></p></div>
+      <p class="score">Your score is <span class="currentScore">0</span>/10</p>
+    </div>
+    </main>
+    
+    <!--MathJax is an accesible avascript library that formats and displays math notation-->
+    <script type="text/x-mathjax-config">
+	    MathJax.Hub.Config({
+	      messageStyle: "none"
+	    });
+	  </script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="questions.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
