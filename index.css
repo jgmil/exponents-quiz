@@ -27,8 +27,8 @@ button {
 
 input[type="radio"] {
   display: inline-block;
-  margin-left: 5px;
-  margin-right: 15px;
+  margin-left: 15px;
+  padding-right: 5px;
 }
 
 fieldset {
@@ -36,7 +36,7 @@ fieldset {
 }
 
 .mainTitle {
-  background-color: lightGrey;
+  background-color: gainsboro;
   text-align: center;
   padding: 20px;
   Font-Size: 20px;
@@ -55,7 +55,7 @@ fieldset {
 
 .question {
   max-width: 600px;
-  height: 250px;
+  height: 275px;
   margin-top: 10px;
   margin-bottom: 10px;
   border: none;
@@ -67,7 +67,7 @@ fieldset {
 }
 
 .status {
-  background-color: lightGrey;
+  background-color: gainsboro;
   text-align: center;
   height: 130px;
 }

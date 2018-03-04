@@ -31,7 +31,7 @@ function nextQuestion(){
 function verifyAnswer(){
   $(".question").on("click", ".submitAnswer", event =>
   {
-    $("input[type=radio]").attr('disabled', true);
+    //$("input[type=radio]").attr('disabled', true);
     var userAnswer = $( "input[type=radio][name=answerChoice]:checked").val();
       if($('input[name=answerChoice]:checked').length<=0) {
         alert("Please select an answer");
@@ -48,7 +48,8 @@ function verifyAnswer(){
         $(".feedback").css("visibility", "visible");
         $(startOver);
       }
-      $(nextQuestion);
+      $("input[type=radio]").attr('disabled', true);
+    $(nextQuestion);
     }
   });
 }
@@ -102,7 +103,6 @@ function startOver() {
     $(updateQuestion);
     var updatedScore = score.toString();
     $(".question").css("display", "none");
-    //$(".feedback").css("hidden");
     $(".currentScore").text(updatedScore);
     $(".startPage").toggleClass("display");
     $(".status").css("display", "none");
