@@ -7,11 +7,13 @@ $(".startQuiz").on("click", event =>
   {
     questionIndex = 0;
     score = 0;
-    $(".question").toggleClass("display");
-    $(".submitAnswer").toggleClass("display");
-    $(".status").toggleClass("display");
-    $(".feedback").css("visbility","hidden");
-    $(".startPage").toggleClass("displayNone");
+    $(".question").css("display","block");
+    $(".question").css("visibility","visible");
+    $(".submitAnswer").css("display", "block");
+    $(".status").css("display","block");
+    $(".status").css("visibility","visible");
+    $(".feedback").css("visibility", "hidden");
+    $(".startPage").css("display", "none");
   });
 }
 
@@ -31,7 +33,6 @@ function nextQuestion(){
 function verifyAnswer(){
   $(".question").on("click", ".submitAnswer", event =>
   {
-    //$("input[type=radio]").attr('disabled', true);
     var userAnswer = $( "input[type=radio][name=answerChoice]:checked").val();
       if($('input[name=answerChoice]:checked').length<=0) {
         alert("Please select an answer");
@@ -43,8 +44,8 @@ function verifyAnswer(){
       if (questionIndex != 9) {
         $(".submitAnswer").replaceWith("<button type='button' class='nextQuestion'>Next Question</button>");
       } else {
-        $(".submitAnswer").toggleClass("displayNone");
-        $(".startOver").toggleClass("display");
+        $(".submitAnswer").css("display", "none");
+        $(".startOver").css("display", "block");
         $(".feedback").css("visibility", "visible");
         $(startOver);
       }
@@ -104,7 +105,7 @@ function startOver() {
     var updatedScore = score.toString();
     $(".question").css("display", "none");
     $(".currentScore").text(updatedScore);
-    $(".startPage").toggleClass("display");
+    $(".startPage").css("display", "block");
     $(".status").css("display", "none");
     $(".startOver").css("display", "none");
   });

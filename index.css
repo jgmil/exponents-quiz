@@ -84,19 +84,3 @@ fieldset {
 .startOver {
   display: none;
 }
-
-.hidden {
-  visibility: hidden;
-}
-
-.visible {
-  visibility: visible;
-}
-
-.displayNone {
-  display: none;
-}
-
-.display {
-  display: block;
-}
